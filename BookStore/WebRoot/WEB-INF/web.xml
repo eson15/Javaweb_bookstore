@@ -1,12 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>BookStore</display-name>
+  <display-name>bookstore</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <filter>
+  	<filter-name>CharactorEncodingFilter</filter-name>
+  	<filter-class>filter.CharactorEncodingFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>HtmlFilter</filter-name>
+  	<filter-class>filter.HtmlFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>CharactorEncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>HtmlFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>CategoryServlet</servlet-name>
+    <servlet-class>web.manager.CategoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BookServlet</servlet-name>
+    <servlet-class>web.manager.BookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>web.client.IndexServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BuyServlet</servlet-name>
+    <servlet-class>web.client.BuyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>web.client.OrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>web.client.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>web.client.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginOutServlet</servlet-name>
+    <servlet-class>web.client.LoginOutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListOrderServlet</servlet-name>
+    <servlet-class>web.manager.ListOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderDetailServlet</servlet-name>
+    <servlet-class>web.manager.OrderDetailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ConfirmOrderServlet</servlet-name>
+    <servlet-class>web.manager.ConfirmOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClientListOrderServlet</servlet-name>
+    <servlet-class>web.client.ClientListOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ClientOrderDetailServlet</servlet-name>
+    <servlet-class>web.client.ClientOrderDetailServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>CategoryServlet</servlet-name>
+    <url-pattern>/manager/CategoryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookServlet</servlet-name>
+    <url-pattern>/manager/BookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/client/IndexServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BuyServlet</servlet-name>
+    <url-pattern>/client/BuyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/client/OrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/client/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/client/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginOutServlet</servlet-name>
+    <url-pattern>/client/LoginOutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListOrderServlet</servlet-name>
+    <url-pattern>/manager/ListOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderDetailServlet</servlet-name>
+    <url-pattern>/manager/OrderDetailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ConfirmOrderServlet</servlet-name>
+    <url-pattern>/manager/ConfirmOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClientListOrderServlet</servlet-name>
+    <url-pattern>/client/ClientListOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClientOrderDetailServlet</servlet-name>
+    <url-pattern>/client/ClientOrderDetailServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
