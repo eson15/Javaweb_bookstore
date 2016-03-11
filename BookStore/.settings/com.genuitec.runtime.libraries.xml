@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project>
   <disabled-container path="com.genuitec.runtime.library/com.genuitec.jstl_1.2.1"/>
+  <container path="com.genuitec.runtime.library/com.genuitec.generic_6.0">
+    <jar-attrs id="data/libraryset/EE_6//javax.servlet.jar">
+      <attribute name="javadoc_location" value="http://java.sun.com/javaee/6/docs/api/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source-path" value="E:\web\apache-tomcat-8.0.26\bin"/>
+    </jar-attrs>
+  </container>
 </project>
